@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --color-gold: #C5A059;
+}
+
+/* Page Transitions using View Transitions API */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.4s;
+}
+
+::view-transition-old(root) {
+  animation-name: fade-out;
+}
+
+::view-transition-new(root) {
+  animation-name: fade-in;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Fallback for browsers without View Transitions API */
+body {
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Scroll Reveal Animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@layer components {
+  /* Desktop Vertical Sidebar Navigation */
+  .nav-link-vertical {
+    @apply flex flex-col items-center justify-center gap-2 py-4 px-4 text-gray-400
+           hover:bg-white/5 hover:text-[#C5A059]
+           transition-all duration-300
+           uppercase tracking-widest;
+  }
+
+  .nav-link-vertical.active {
+    @apply bg-white/5 text-[#C5A059] border-l-2 border-[#C5A059];
+  }
+
+  .nav-link-vertical svg {
+    @apply flex-shrink-0;
+  }
+
+  /* Mobile Bottom Navigation */
+  .nav-link-mobile {
+    @apply flex flex-col items-center justify-center gap-1 py-2 px-3 text-gray-400
+           hover:text-[#C5A059]
+           transition-all duration-300
+           uppercase tracking-widest;
+  }
+
+  .nav-link-mobile.active {
+    @apply text-[#C5A059];
+  }
+
+  .nav-link-mobile svg {
+    @apply flex-shrink-0;
+  }
+}

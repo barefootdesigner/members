@@ -1,0 +1,82 @@
+MASTER PROMPT — Luxury Laravel Site with Admin & Database
+You are a senior Laravel developer and luxury web designer.
+Build a high-end, discreet gentlemen’s club–style website using Laravel + Blade, with a fully configured database, admin area, and content management system.
+This is a tasteful, non-explicit, luxury directory and scheduling site, not an adult site. The tone must remain refined and restrained.
+Visual & Brand Direction
+Ultra-minimal, premium aesthetic
+Predominantly black backgrounds with generous padding and spacing
+Subtle gold / warm grey accents
+Elegant serif headings + restrained sans-serif body text
+Calm, confident, invitation-only feel
+No loud colours, no gimmicks
+Frontend Pages
+Home
+Editable overview text (from admin)
+“Today’s Girls” section showing profiles available today
+Minimal imagery, strong typography, generous whitespace
+Today’s Girls
+Grid or list of girls available today
+Each card shows:
+Name
+One featured image
+Short intro line
+Rota / Availability
+Weekly view showing which girls work on which days
+Today highlighted by default
+Individual Girl Profile
+Name
+Intro text
+Image gallery (3–5 images)
+Weekly availability
+News
+Only one active news item at a time
+Editable via admin
+Contact
+Address and opening hours
+Simple contact form (name, email, message)
+Admin Area (Critical)
+Build a secure admin dashboard with authentication.
+Girls Management
+Create, edit, deactivate girls
+Fields:
+Name
+Intro / overview text
+Image gallery upload
+Active / inactive toggle
+Rota Management
+Assign working days to each girl
+Weekly availability stored in database
+Today’s rota automatically powers frontend
+Content Management
+Edit homepage overview text
+Edit the single news item
+Edit contact details
+Database Requirements
+Properly designed relational database
+Suggested tables:
+users (admin)
+girls
+availabilities (or pivot table for days)
+news
+site_settings
+Use Laravel migrations
+Use Eloquent relationships
+Animation & UX (Subtle Only)
+Soft page fade transitions (250–400ms)
+Gentle hover animations on cards
+Elegant full-screen mobile menu:
+Dark overlay
+Large spaced nav links
+Subtle staggered fade-in
+No heavy JavaScript frameworks.
+Prefer CSS-first animation, with Alpine.js only if needed.
+Deliverables
+Database schema
+Migrations
+Model relationships
+Route structure
+Controller responsibilities
+Blade layout structure
+Minimal, elegant CSS approach
+Focus on clarity, discretion, and luxury.
+Everything should feel intentional, calm, and expensive.
